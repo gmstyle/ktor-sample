@@ -2,10 +2,8 @@ package com.example.plugins
 
 import com.example.repositories.DeviceRepository
 import com.example.repositories.UserRepository
-import com.example.services.DeviceService
-import com.example.services.DeviceServiceImpl
-import com.example.services.UserService
-import com.example.services.UserServiceImpl
+import com.example.repositories.AccountRepository
+import com.example.services.*
 import com.mysql.cj.log.Slf4JLogger
 import io.ktor.server.application.*
 import org.koin.core.module.dsl.bind
@@ -33,4 +31,6 @@ val applicationModule = module(createdAtStart = true){
     singleOf(::UserRepository)
     singleOf(::DeviceServiceImpl) {bind<DeviceService>()}
     singleOf(::DeviceRepository)
+    singleOf(::AcccountServiceImpl) {bind<AccountService>()}
+    singleOf(::AccountRepository)
 }

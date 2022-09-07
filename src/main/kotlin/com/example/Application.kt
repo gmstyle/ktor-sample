@@ -1,6 +1,7 @@
 package com.example
 
 import com.example.plugins.*
+import com.example.plugins.routing.accountRouting
 import com.example.plugins.routing.defaultRouting
 import com.example.plugins.routing.deviceRouting
 import com.example.plugins.routing.userRouting
@@ -38,4 +39,5 @@ fun Application.module() {
     userRouting()
     deviceRouting()
     defaultRouting()
+    accountRouting()
 }
