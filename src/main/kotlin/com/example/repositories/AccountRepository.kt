@@ -1,6 +1,5 @@
 package com.example.repositories
 
-import com.example.models.AccountModel
 import com.example.database.DatabaseConnector.database
 import com.example.tables.AccountEntity
 import com.example.tables.accounts
