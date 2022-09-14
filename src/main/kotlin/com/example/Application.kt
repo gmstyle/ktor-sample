@@ -29,15 +29,17 @@ fun main(args: Array<String>): Unit =
 
 // configurazione in resources/application.conf
 fun Application.module() {
+
     environment.config.propertyOrNull("ktor.deployment.port")?.getString()
     configureMonitoring()
     configureSerialization()
     configureSecurity()
     configKoinModules()
     configureCorse()
-    sampleRouting()
+    oauthRouting()
     userRouting()
     deviceRouting()
     defaultRouting()
     accountRouting()
+    oauthModule()
 }
