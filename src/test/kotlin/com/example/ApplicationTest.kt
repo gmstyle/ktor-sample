@@ -5,7 +5,7 @@ import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import kotlin.test.*
 import io.ktor.server.testing.*
-import com.example.plugins.*
+import com.example.plugins.routing.oauthRouting
 
 class ApplicationTest {
     @Test

@@ -1,7 +1,8 @@
-package com.example.plugins
+package com.example.plugins.routing
 
 import com.example.models.UserInfo
 import com.example.models.UserSessionModel
+import com.example.plugins.httpClient
 import io.ktor.client.call.*
 import io.ktor.client.request.*
 import io.ktor.http.*

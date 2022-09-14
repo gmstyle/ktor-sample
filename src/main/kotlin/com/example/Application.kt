@@ -1,10 +1,7 @@
 package com.example
 
 import com.example.plugins.*
-import com.example.plugins.routing.accountRouting
-import com.example.plugins.routing.defaultRouting
-import com.example.plugins.routing.deviceRouting
-import com.example.plugins.routing.userRouting
+import com.example.plugins.routing.*
 import io.ktor.server.application.*
 import io.ktor.server.netty.*
 
