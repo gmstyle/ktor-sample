@@ -2,7 +2,7 @@ package com.example.plugins.routing
 
 import com.example.models.UserInfo
 import com.example.models.UserSessionModel
-import com.example.plugins.httpClient
+import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.request.*
 import io.ktor.http.*
@@ -16,7 +16,7 @@ import kotlinx.html.a
 import kotlinx.html.body
 import kotlinx.html.p
 
-fun Application.oauthRouting() {
+fun Application.oauthRouting(httpClient: HttpClient) {
 
     routing {
         /**

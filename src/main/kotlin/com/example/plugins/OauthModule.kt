@@ -2,22 +2,13 @@ package com.example.plugins
 
 import com.example.models.UserSessionModel
 import io.ktor.client.*
-import io.ktor.client.engine.cio.*
-import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.http.*
-import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*
 import io.ktor.server.auth.*
 import io.ktor.server.sessions.*
 
 
-val httpClient = HttpClient(CIO){
-    install(ContentNegotiation){
-        json()
-    }
-}
-
-fun Application.oauthModule() {
+fun Application.oauthModule(httpClient: HttpClient) {
     install(Sessions) {
         cookie<UserSessionModel>("user_session")
     }
