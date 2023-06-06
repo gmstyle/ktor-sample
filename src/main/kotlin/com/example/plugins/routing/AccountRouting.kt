@@ -1,5 +1,6 @@
 package com.example.plugins.routing
 
+import com.example.models.AccountModel
 import com.example.models.ApiResponseModel
 import com.example.models.LoginRequestModel
 import com.example.services.AccountService

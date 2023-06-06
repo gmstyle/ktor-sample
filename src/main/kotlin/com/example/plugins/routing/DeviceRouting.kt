@@ -99,10 +99,10 @@ fun Application.deviceRouting(){
             }
             val deviceToAdd = DeviceModel(id = null, nome = requestBody.nome, user = userProprietario)
             val device = deviceService.insertDevice(deviceToAdd, userIdProprietario)
-            val deviceAdded = deviceService.getDeviceById(device.id!!)
+            //val deviceAdded = deviceService.getDeviceById(device.id!!)
             call.respond(HttpStatusCode.OK, ApiResponseModel(
                 result = true,
-                data = deviceAdded,
+                data = device,
                 message = "New device succesfully added!"
             ))
         }
